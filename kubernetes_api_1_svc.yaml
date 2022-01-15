@@ -1,0 +1,16 @@
+#
+# app / server
+#
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-api-1
+spec:
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  selector:
+    app: app-api-1
